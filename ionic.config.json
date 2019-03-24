@@ -1,5 +1,7 @@
 {
   "name": "simple-movies-app",
-  "integrations": {},
+  "integrations": {
+    "cordova": {}
+  },
   "type": "angular"
 }
