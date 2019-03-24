@@ -8,15 +8,6 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'home',
-        children: [
-          {
-            path: '',
-            loadChildren: '..//home-tab/home-tab.module#HomeTabPageModule',
-          },
-        ],
-      },
-      {
         path: 'movies',
         children: [
           {
@@ -35,6 +26,15 @@ const routes: Routes = [
         ],
       },
       {
+        path: 'search',
+        children: [
+          {
+            path: '',
+            loadChildren: '../search-tab/search-tab.module#SearchTabPageModule',
+          },
+        ],
+      },
+      {
         path: 'settings',
         children: [
           {
@@ -45,14 +45,14 @@ const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/tabs/home',
+        redirectTo: '/tabs/movies',
         pathMatch: 'full',
       },
     ],
   },
   {
     path: '',
-    redirectTo: '/tabs/home',
+    redirectTo: '/tabs/movies',
     pathMatch: 'full',
   },
 ];

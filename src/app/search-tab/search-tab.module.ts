@@ -1,16 +1,17 @@
-import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { RouterModule, Routes } from '@angular/router';
-import { IonicModule } from '@ionic/angular';
-import { TranslateModule } from '@ngx-translate/core';
+import { Routes, RouterModule } from '@angular/router';
 
-import { HomeTabPage } from './home-tab.page';
+import { IonicModule } from '@ionic/angular';
+
+import { SearchTabPage } from './search-tab.page';
+import { TranslateModule } from '@ngx-translate/core';
 
 const routes: Routes = [
   {
     path: '',
-    component: HomeTabPage,
+    component: SearchTabPage,
   },
 ];
 
@@ -22,6 +23,6 @@ const routes: Routes = [
     RouterModule.forChild(routes),
     TranslateModule.forChild(),
   ],
-  declarations: [HomeTabPage],
+  declarations: [SearchTabPage],
 })
-export class HomeTabPageModule {}
+export class SearchTabPageModule {}

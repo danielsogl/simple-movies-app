@@ -1,8 +1,8 @@
 {
   "TABS": {
-    "HOME": "Home",
     "MOVIES": "Movies",
-    "TV_SHOWS": "TV-Shows",
-    "SETTINGS": "Settings"
+    "SEARCH": "Search",
+    "SETTINGS": "Settings",
+    "TV_SHOWS": "TV-Shows"
   }
 }
