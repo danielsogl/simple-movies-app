@@ -1,17 +1,17 @@
-import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
-import { Routes, RouterModule } from '@angular/router';
-
+import { RouterModule, Routes } from '@angular/router';
 import { IonicModule } from '@ionic/angular';
+import { TranslateModule } from '@ngx-translate/core';
 
 import { MoviesTabPage } from './movies-tab.page';
 
 const routes: Routes = [
   {
     path: '',
-    component: MoviesTabPage
-  }
+    component: MoviesTabPage,
+  },
 ];
 
 @NgModule({
@@ -19,8 +19,9 @@ const routes: Routes = [
     CommonModule,
     FormsModule,
     IonicModule,
-    RouterModule.forChild(routes)
+    RouterModule.forChild(routes),
+    TranslateModule.forChild(),
   ],
-  declarations: [MoviesTabPage]
+  declarations: [MoviesTabPage],
 })
 export class MoviesTabPageModule {}
