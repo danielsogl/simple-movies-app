@@ -8,50 +8,57 @@ const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
+        path: 'home',
         children: [
           {
             path: '',
-            loadChildren: '../tab1/tab1.module#Tab1PageModule'
-          }
-        ]
+            loadChildren: '..//home-tab/home-tab.module#HomeTabPageModule',
+          },
+        ],
       },
       {
-        path: 'tab2',
+        path: 'movies',
         children: [
           {
             path: '',
-            loadChildren: '../tab2/tab2.module#Tab2PageModule'
-          }
-        ]
+            loadChildren: '../movies-tab/movies-tab.module#MoviesTabPageModule',
+          },
+        ],
       },
       {
-        path: 'tab3',
+        path: 'tv-shows',
         children: [
           {
             path: '',
-            loadChildren: '../tab3/tab3.module#Tab3PageModule'
-          }
-        ]
+            loadChildren: '../tv-shows-tab/tv-shows-tab.module#TvShowsTabPageModule',
+          },
+        ],
+      },
+      {
+        path: 'settings',
+        children: [
+          {
+            path: '',
+            loadChildren: '../settings-tab/settings-tab.module#SettingsTabPageModule',
+          },
+        ],
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
-        pathMatch: 'full'
-      }
-    ]
+        redirectTo: '/tabs/home',
+        pathMatch: 'full',
+      },
+    ],
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
-    pathMatch: 'full'
-  }
+    redirectTo: '/tabs/home',
+    pathMatch: 'full',
+  },
 ];
 
 @NgModule({
-  imports: [
-    RouterModule.forChild(routes)
-  ],
-  exports: [RouterModule]
+  imports: [RouterModule.forChild(routes)],
+  exports: [RouterModule],
 })
 export class TabsPageRoutingModule {}
