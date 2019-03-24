@@ -5,5 +5,29 @@
 </ion-header>
 
 <ion-content>
+  <ion-grid>
+    <ion-row>
+      <ion-col
+        size="6"
+        sizeSm="4"
+        sizeMd="3"
+        sizeXl="2"
+        *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8, 9]"
+      >
+        <ion-card>
+          <img src="https://picsum.photos/500" />
+          <ion-card-header>
+            <ion-card-subtitle>Card Subtitle</ion-card-subtitle>
+            <ion-card-title>Card Title</ion-card-title>
+          </ion-card-header>
 
+          <ion-card-content>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptates ipsam harum, sunt
+            provident exercitationem ipsum. Aliquid molestiae corrupti, totam dolorum quas, animi
+            nostrum dolorem minus, enim autem libero itaque deserunt!
+          </ion-card-content>
+        </ion-card>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 </ion-content>
