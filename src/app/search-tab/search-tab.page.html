@@ -8,5 +8,12 @@
 </ion-header>
 
 <ion-content>
-
+  <ion-list>
+    <ion-item *ngFor="let item of [1, 2, 3, 4, 5, 6, 7, 8, 9]">
+      <ion-thumbnail slot="start">
+        <img src="https://picsum.photos/500" />
+      </ion-thumbnail>
+      <ion-label>Title</ion-label>
+    </ion-item>
+  </ion-list>
 </ion-content>
